@@ -237,48 +237,53 @@ open class PdvActivity : AppCompatActivity(), Serializable{
                 sale.payment_method_id = 1
                 sale.branch_id = retrivedBranchId
 
-                sale.discount = editQtdDiscount.text.toString().toInt()
+                if(editQtdDiscount.text.isEmpty()){
+                    Toast.makeText(this, "Insira um Desconto Valido", Toast.LENGTH_SHORT).show()
+                } else{
 
-                val listOfItens = ArrayList<Itens>()
+                    sale.discount = editQtdDiscount.text.toString().toInt()
 
-                listProducts.forEach {
+                    val listOfItens = ArrayList<Itens>()
 
-                    var index = 0
+                    listProducts.forEach {
 
-                    val iten: Itens = Itens(product_id = it.id, quantity = it.qtd)
+                        var index = 0
 
-                    if (listOfItens.size > 0) {
-                        index = listOfItens.size - 1
+                        val iten: Itens = Itens(product_id = it.id, quantity = it.qtd)
+
+                        if (listOfItens.size > 0) {
+                            index = listOfItens.size - 1
+                        }
+
+                        listOfItens.add(iten)
                     }
 
-                    listOfItens.add(iten)
+                    sale.items = listOfItens
+
+                    val retrofit = RetrofitApi.getRetrofit()
+                    val saleCall = retrofit.create(SaleAndPurchaseCalls::class.java)
+                    val call = saleCall.postSale(sale, "Bearer ${retrivedToken}")
+
+                    call.enqueue(object : retrofit2.Callback<Sale> {
+                        override fun onFailure(call: Call<Sale>, t: Throwable) {
+                            Toast.makeText(
+                                this@PdvActivity,
+                                "Ops! Acho que ocorreu um problema.",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            Log.e("ERRO_CONEXÃO", t.message.toString())
+                        }
+
+                        override fun onResponse(call: Call<Sale>, response: Response<Sale>) {
+                            sale = response.body()!!
+
+                        }
+                    })
+                    alertShow.dismiss()
+                    startActivity(getIntent())
+                    finish()
+                    Toast.makeText(this, "Venda Concluida", Toast.LENGTH_LONG).show()
                 }
-
-                sale.items = listOfItens
-
-                val retrofit = RetrofitApi.getRetrofit()
-                val saleCall = retrofit.create(SaleAndPurchaseCalls::class.java)
-                val call = saleCall.postSale(sale, "Bearer ${retrivedToken}")
-
-                call.enqueue(object : retrofit2.Callback<Sale> {
-                    override fun onFailure(call: Call<Sale>, t: Throwable) {
-                        Toast.makeText(
-                            this@PdvActivity,
-                            "Ops! Acho que ocorreu um problema.",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                        Log.e("ERRO_CONEXÃO", t.message.toString())
-                    }
-
-                    override fun onResponse(call: Call<Sale>, response: Response<Sale>) {
-                        sale = response.body()!!
-
-                    }
-                })
-                alertShow.dismiss()
-                startActivity(getIntent())
-                finish()
-                Toast.makeText(this, "Venda Concluida", Toast.LENGTH_LONG).show()
             }
         }
     }
