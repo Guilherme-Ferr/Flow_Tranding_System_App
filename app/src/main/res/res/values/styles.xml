@@ -1,0 +1,69 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Login -->
+    <style name="hintInputAppearence" parent="Theme.MaterialComponents.Light">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="theme">@style/Theme.AppCompat.Light</item>
+    </style>
+    <style name="buttonTextAppearence" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:theme">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+    <style name="footerAppearence" parent="Theme.MaterialComponents.Light">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="theme">@style/Theme.MaterialComponents.Light</item>
+    </style>
+
+    <!--splash -->
+    <style name="splash_startupName_appearence" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">true</item>
+        <item name="theme">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="splash_startupKind_appearence" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="theme">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <!-- Employee Register -->
+    <style name="register_title_appearence" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="theme">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="holder_menu_title" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="color">@color/logoDark</item>
+    </style>
+
+</resources>

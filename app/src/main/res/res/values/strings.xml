@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Flow Tranding System</string>
+    <string name="login">Login</string>
+    <string name="forgotPassword">Esqueceu sua senha?</string>
+
+    <!-- Personal Information-->
+    <string name="nome">Nome</string>
+    <string name="rg">RG</string>
+    <string name="cpf">CPF</string>
+    <string name="user">Usúario</string>
+    <string name="password">Senha</string>
+
+    <!-- Titles and subtitles-->
+
+    <string name="fts">Flow Tranding System</string>
+    <string name="kind_of_system">Sistema de Gerenciamento Comercial</string>
+    <string name="arent_you_a_client">Não é cliente? Conheça nossos planos!</string>
+    <string name="register">Cadastrar</string>
+
+    <!--Inventory section-->
+    <string name="add_product">Cadastro de Produtos</string>
+    <string name="sell">Venda</string>
+    <string name="inventory">Estoque</string>
+    <string name="type">tipo</string>
+    <string name="price_un">Preço unitário</string>
+    <string name="price_all">Preço Atacado</string>
+    <string name="amount_in_inventory">Quantidade em estoque</string>
+    <string name="expiration_date">Expiração</string>
+    <string name="acquisition_date">Data de Aquisição</string>
+
+
+    <string name="open">Abrir</string>
+    <string name="close">Fechar</string>
+    <string name="save">Salvar</string>
+    <string name="find">Buscar</string>
+
+    <string-array name="products_type">
+        <item>Elétrodomesticos</item>
+        <item>Papelaria</item>
+        <item>Decoração</item>
+    </string-array>
+
+</resources>

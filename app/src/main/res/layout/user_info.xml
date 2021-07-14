@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayoutUserInfo"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="25dp"
+        android:layout_below="@+id/datasheet_list_title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/title_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:textAlignment="center"
+            android:textColor="@color/primaryDark"
+            app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="350dp"
+            android:layout_height="2dp"
+            android:background="@color/primaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+        <TextView
+            android:id="@+id/user_rg"
+            style="@style/product_infotmation_titles"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/rgUser"
+            android:textColor="@color/secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+        <TextView
+            android:id="@+id/user_cpf"
+            style="@style/product_infotmation_titles"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/cpfUser"
+            android:textColor="@color/secondary"
+            app:layout_constraintStart_toStartOf="@+id/user_rg"
+            app:layout_constraintTop_toBottomOf="@+id/rg_from_user" />
+
+
+        <TextView
+            android:id="@+id/user_role"
+            style="@style/product_infotmation_titles"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/role"
+            android:textColor="@color/secondary"
+            app:layout_constraintStart_toStartOf="@+id/user_rg"
+            app:layout_constraintTop_toBottomOf="@+id/cpf_from_user" />
+
+        <TextView
+            android:id="@+id/user_branch"
+            style="@style/product_infotmation_titles"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/branch"
+            android:textColor="@color/secondary"
+            app:layout_constraintStart_toStartOf="@+id/user_rg"
+            app:layout_constraintTop_toBottomOf="@+id/role_from_user" />
+
+        <TextView
+            android:id="@+id/rg_from_user"
+            style="@style/product_infotmation_titles"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/secondary"
+            app:layout_constraintBottom_toBottomOf="@+id/user_rg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/user_rg" />
+
+        <TextView
+            android:id="@+id/cpf_from_user"
+            style="@style/product_infotmation_titles"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/secondary"
+            app:layout_constraintBottom_toBottomOf="@+id/user_cpf"
+            app:layout_constraintEnd_toEndOf="@+id/rg_from_user"
+            app:layout_constraintTop_toTopOf="@+id/user_cpf" />
+
+        <TextView
+            android:id="@+id/role_from_user"
+            style="@style/product_infotmation_titles"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:textAlignment="textEnd"
+            android:textColor="@color/secondary"
+            app:layout_constraintBottom_toBottomOf="@+id/user_role"
+            app:layout_constraintEnd_toEndOf="@+id/rg_from_user"
+            app:layout_constraintTop_toTopOf="@+id/user_role" />
+
+        <TextView
+            android:id="@+id/branch_from_user"
+            style="@style/product_infotmation_titles"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textColor="@color/secondary"
+            app:layout_constraintEnd_toEndOf="@+id/rg_from_user"
+            app:layout_constraintTop_toTopOf="@+id/user_branch" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/footer_fts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="500dp"
+            android:background="@drawable/rounded_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/app_name"
+            android:orientation="horizontal"
+            android:textAlignment="center"
+            style="@style/footerAppearence"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/user_navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/nav_drawer_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

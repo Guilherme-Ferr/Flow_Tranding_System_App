@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    android:gravity="center_horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_img"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/circle_dark"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_logo_splash"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/fts"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/startup_name_splash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="@string/app_name"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toBottomOf="@+id/const_img"
+        android:textAppearance="@style/splash_startupName_appearence"/>
+
+    <TextView
+        android:id="@+id/startup_kind_splash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/kind_of_system"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toBottomOf="@+id/startup_name_splash"
+        android:textAppearance="@style/splash_startupKind_appearence"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <EditText
+            android:id="@+id/pdv_activity_product_code"
+            android:layout_width="280dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/product_code"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/prices_pdv_screen"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_camera_code"
+            android:layout_width="45dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_baseline_qr_code_2_24"
+            app:layout_constraintBottom_toBottomOf="@+id/pdv_activity_product_code"
+            app:layout_constraintStart_toEndOf="@id/pdv_activity_product_code"
+            app:layout_constraintTop_toTopOf="@+id/pdv_activity_product_code" />
+
+        <LinearLayout
+            android:id="@+id/prices_pdv_screen"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pdv_activity_product_code">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pdv_qtd"
+                    style="@style/titles_pdv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Quantidade"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <EditText
+                    android:id="@+id/pdv_qtde_sale"
+                    style="@style/pdv_prices"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="0"
+                    android:inputType="number"
+                    app:layout_constraintTop_toBottomOf="@+id/pdv_qtd"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <Button
+                    android:id="@+id/remove_code"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/pdv_title_radius"
+                    android:text="-"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="18dp"
+                    app:layout_constraintTop_toBottomOf="@+id/pdv_qtde_sale"/>
+
+                <Button
+                    android:id="@+id/add_code"
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/pdv_title_radius"
+                    android:text="+"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="18dp"
+                    app:layout_constraintTop_toTopOf="@+id/remove_code" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:paddingBottom="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/buy" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/product_list_table"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/pdv_radius"
+            android:padding="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/prices_pdv_screen">
+
+            <LinearLayout
+                android:id="@+id/product_list_pdv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pdv_title_radius"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_view_title_pdv"
+                    style="@style/pdv_white_titles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_list"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_titles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light"
+                app:layout_constraintTop_toBottomOf="@+id/product_list_pdv">
+
+                <TextView
+                    android:id="@+id/code_product_title"
+                    style="@style/buy_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/code"
+                   android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/name_product_title"
+                    style="@style/buy_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="6"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/product"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tv_vlr_un_title"
+                    style="@style/buy_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/un_price_abrv"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/tv_total_title"
+                    style="@style/buy_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="4"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/total"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_product_sale"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/linear_titles"
+                app:layout_constraintStart_toStartOf="@+id/linear_titles"
+                app:layout_constraintTop_toBottomOf="@+id/linear_titles"
+                tools:listitem="@layout/holder_list_items_sale" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_subtotal"
+            android:layout_width="170dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/pdv_radius"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/product_list_table"
+            app:layout_constraintTop_toBottomOf="@+id/product_list_table">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pdv_title_radius"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:textAlignment="center">
+
+                <TextView
+                    style="@style/pdv_white_titles"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="@string/subtotal"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/subTotal_pdv"
+                    style="@style/titles_pdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="R$0,00"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linear_add_discount"-->
+<!--            android:layout_width="170dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/pdv_radius"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/product_list_table"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/linear_subtotal">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/pdv_title_radius"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:padding="5dp"-->
+<!--                android:textAlignment="center">-->
+
+<!--                <TextView-->
+<!--                    style="@style/pdv_white_titles"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:text="@string/discount"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="@color/white" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:padding="10dp">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/final_discount"-->
+<!--                    style="@style/titles_pdv"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="0%"-->
+<!--                    android:textAlignment="center" />-->
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+        <Button
+            android:id="@+id/pdv_client_register"
+            style="@style/pdv_white_titles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/pdv_title_radius"
+            android:padding="8dp"
+            android:text="@string/client_register"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/product_list_table"
+            app:layout_constraintStart_toEndOf="@+id/linear_subtotal"
+            app:layout_constraintTop_toTopOf="@+id/linear_subtotal" />
+
+        <Button
+            android:id="@+id/finish_sale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/pdv_title_radius"
+            android:text="@string/finish"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/linear_subtotal"
+            app:layout_constraintEnd_toEndOf="@+id/product_list_table"
+            app:layout_constraintStart_toEndOf="@+id/linear_subtotal" />
+
+        <!--        <Button-->
+<!--            android:id="@+id/pdv_add_discount"-->
+<!--            style="@style/pdv_white_titles"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/pdv_title_radius"-->
+<!--            android:text="@string/add_discount"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="15sp"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/linear_add_discount"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/linear_add_discount"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/pdv_client_register"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

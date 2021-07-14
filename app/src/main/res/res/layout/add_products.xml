@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/manager_register_title"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/rounded_bottom"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_product"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="@style/register_title_appearence"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/add_products_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:inputType="textCapWords"
+        android:hint="@string/nome"
+
+        app:layout_constraintTop_toBottomOf="@+id/manager_register_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/add_products_type_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/type"
+        style="@style/hintInputAppearence"
+        android:layout_marginLeft="40dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/add_products_name"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Spinner
+        android:id="@+id/add_products_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:inputType="number"
+        android:hint="@string/type"
+        android:entries="@array/products_type"
+
+        app:layout_constraintTop_toBottomOf="@+id/add_products_type_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/add_products_un_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:inputType="number"
+        android:hint="@string/price_un"
+
+        app:layout_constraintTop_toBottomOf="@+id/add_products_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/add_products_box_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:inputType="number"
+        android:hint="@string/price_all"
+
+        app:layout_constraintTop_toBottomOf="@+id/add_products_un_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/add_products_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:inputType="number"
+        android:hint="@string/amount_in_inventory"
+
+        app:layout_constraintTop_toBottomOf="@+id/add_products_box_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/add_products_acquisition_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:inputType="date"
+        android:hint="@string/acquisition_date"
+
+        app:layout_constraintTop_toBottomOf="@+id/add_products_quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/add_products_expiration_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:inputType="datetime"
+        android:hint="@string/acquisition_date"
+
+        app:layout_constraintTop_toBottomOf="@+id/add_products_acquisition_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/employees_register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/rounded_purple_button"
+        android:text="@string/save"
+        android:textAppearance="@style/buttonTextAppearence"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_products_expiration_date"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/rounded_top"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/manager_register_footer"
+            android:textAppearance="@style/footerAppearence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@string/app_name"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

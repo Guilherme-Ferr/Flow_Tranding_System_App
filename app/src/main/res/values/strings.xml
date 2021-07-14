@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">Flow Trading System</string>
+    <string name="login">Login</string>
+    <string name="forgotPassword">Esqueceu sua senha?</string>
+
+    <!-- Personal Information-->
+    <string name="nome">Nome</string>
+    <string name="rg">RG</string>
+    <string name="rgUser">RG:</string>
+    <string name="cpf">CPF</string>
+    <string name="cpfUser">CPF:</string>
+    <string name="user">Usuário</string>
+    <string name="role">Cargo:</string>
+    <string name="branch">Filial Atual:</string>
+    <string name="permission">Permissão:</string>
+    <string name="password">Senha</string>
+    <string name="profile">Perfil</string>
+    <string name="company">Sobre a Empresa</string>
+    <string name="home">Menu</string>
+    <string name="logout">Deslogar</string>
+    <string name="config">Configurações</string>
+
+    <!-- Company Information-->
+    <string name="companyName">Razão Social:</string>
+    <string name="companyEmail">Email Comercial:</string>
+    <string name="companyPlan">Plano Adiquirido:</string>
+    <string name="companyBusines">Natureza de Negocios:</string>
+    <string name="comanyBranch">Filial Atual:</string>
+
+    <!-- Titles and subtitles-->
+    <string name="fts">Flow Tranding System</string>
+    <string name="kind_of_system">Sistema de Gerenciamento Comercial</string>
+    <string name="arent_you_a_client">Não é cliente? Conheça nossos planos!</string>
+    <string name="register">Cadastrar</string>
+    <string name="menu">Menu</string>
+
+    <!--Inventory section-->
+    <string name="add_product">Cadastro de Produtos</string>
+    <string name="pdv">PDV</string>
+    <string name="sell">Venda</string>
+    <string name="inventory">Estoque</string>
+    <string name="type">Tipo:</string>
+    <string name="price_un">Preço unitário:</string>
+    <string name="price_all">Preço Atacado</string>
+    <string name="amount_in_inventory">Quantidade em estoque:</string>
+    <string name="barcode">Código:</string>
+    <string name="acquisition_date">Data de Aquisição:</string>
+    <string name="quantidade">Quantidade:</string>
+    <string name="expiration_date">Data de Expiração:</string>
+    <string name="companie">Empresa</string>
+    <string name="unit_of_measurement">Unidade de medida</string>
+    <string name="paleparia"><b>Papelaria</b></string>
+    <string name="vestuario"><b>Vestuario</b></string>
+    <string name="code_scaner_hint"><b>Codigo do Poduto:</b></string>
+
+
+    <string name="open">Abrir</string>
+    <string name="close">Fechar</string>
+    <string name="save">Salvar</string>
+    <string name="find">Buscar</string>
+
+    <string-array name="products_type">
+        <item>Elétrodomesticos</item>
+        <item>Papelaria</item>
+        <item>Decoração</item>
+    </string-array>
+
+    <string-array name="payment_methods">
+        <item>Credito</item>
+        <item>Debito</item>
+        <item>Boleto</item>
+        <item>Paypal</item>
+    </string-array>
+
+    <!--PDV Section-->
+    <string name="product_code">Código do Produto</string>
+    <string name="un_value">Valor Unitário</string>
+    <string name="total_price">Total do Item</string>
+    <string name="product_list">Lista de Produtos</string>
+    <string name="item_number">N°</string>
+    <string name="code">Código</string>
+    <string name="description">Descrição</string>
+    <string name="qtd">Qtd</string>
+    <string name="un_price_abrv">Vlr. unit.</string>
+    <string name="total">Total</string>
+    <string name="subtotal">SubTotal</string>
+    <string name="add_discount">Adicionar Desconto</string>
+    <string name="discount">Desconto</string>
+    <string name="finish">Finalizar</string>
+    <string name="client_register">Cadastrar Cliente</string>
+    <string name="payment">Metodo de Pagamento</string>
+    <string name="product">Produto</string>
+
+</resources>

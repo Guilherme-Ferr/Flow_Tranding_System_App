@@ -1,0 +1,134 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.flowtrandingsystem"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:6:5-65
+11-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:6:22-62
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:8:5-67
+12-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:8:22-64
+13
+14    <application
+14-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:10:5-64:19
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.5.0] C:\Users\andre\.gradle\caches\transforms-2\files-2.1\250db63e84e8a3cc8751583daa610259\core-1.5.0\AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:extractNativeLibs="false"
+18        android:icon="@mipmap/ic_launcher"
+18-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:11:9-43
+19        android:label="@string/app_name"
+19-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:12:9-41
+20        android:roundIcon="@mipmap/ic_launcher_round"
+20-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:13:9-54
+21        android:supportsRtl="true"
+21-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:14:9-35
+22        android:testOnly="true"
+23        android:theme="@style/AppTheme" >
+23-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:15:9-40
+24        <activity
+24-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:16:9-24:20
+25            android:name="com.example.flowtrandingsystem.gui.ui.SplashActivity"
+25-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:17:13-50
+26            android:screenOrientation="portrait" >
+26-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:18:13-49
+27            <intent-filter>
+27-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:19:13-23:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:20:17-68
+28-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:20:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:22:17-76
+30-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:22:27-74
+31            </intent-filter>
+32        </activity>
+33        <activity
+33-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:25:9-28:64
+34            android:name="com.example.flowtrandingsystem.gui.ui.ProductTypeActivity"
+34-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:26:13-55
+35            android:parentActivityName="com.example.flowtrandingsystem.gui.ui.MenuActivity"
+35-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:28:13-62
+36            android:screenOrientation="portrait" />
+36-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:27:13-49
+37        <activity
+37-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:29:9-32:64
+38            android:name="com.example.flowtrandingsystem.gui.ui.ReportActivity"
+38-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:30:13-50
+39            android:parentActivityName="com.example.flowtrandingsystem.gui.ui.MenuActivity"
+39-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:32:13-62
+40            android:screenOrientation="portrait" />
+40-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:31:13-49
+41        <activity
+41-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:33:9-36:71
+42            android:name="com.example.flowtrandingsystem.gui.ui.InventoryActivity"
+42-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:34:13-53
+43            android:parentActivityName="com.example.flowtrandingsystem.gui.ui.ProductTypeActivity"
+43-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:36:13-69
+44            android:screenOrientation="portrait" />
+44-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:35:13-49
+45        <activity
+45-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:37:9-39:51
+46            android:name="com.example.flowtrandingsystem.gui.ui.CompanyInfoActivity"
+46-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:38:13-55
+47            android:screenOrientation="portrait" />
+47-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:39:13-49
+48        <activity
+48-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:40:9-42:51
+49            android:name="com.example.flowtrandingsystem.gui.ui.UserInfoActivity"
+49-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:41:13-52
+50            android:screenOrientation="portrait" />
+50-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:42:13-49
+51        <activity
+51-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:43:9-45:51
+52            android:name="com.example.flowtrandingsystem.gui.ui.ScannerActivity"
+52-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:44:13-51
+53            android:screenOrientation="portrait" />
+53-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:45:13-49
+54        <activity
+54-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:46:9-48:51
+55            android:name="com.example.flowtrandingsystem.gui.ui.MenuActivity"
+55-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:47:13-48
+56            android:screenOrientation="portrait" />
+56-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:48:13-49
+57        <activity
+57-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:49:9-52:64
+58            android:name="com.example.flowtrandingsystem.gui.ui.PdvActivity"
+58-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:50:13-47
+59            android:parentActivityName="com.example.flowtrandingsystem.gui.ui.MenuActivity"
+59-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:52:13-62
+60            android:screenOrientation="portrait" />
+60-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:51:13-49
+61        <activity
+61-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:53:9-56:69
+62            android:name="com.example.flowtrandingsystem.gui.ui.DatasheetActivity"
+62-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:54:13-53
+63            android:parentActivityName="com.example.flowtrandingsystem.gui.ui.InventoryActivity"
+63-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:56:13-67
+64            android:screenOrientation="portrait" />
+64-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:55:13-49
+65        <activity
+65-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:57:9-59:51
+66            android:name="com.example.flowtrandingsystem.gui.ui.MainActivity"
+66-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:58:13-48
+67            android:screenOrientation="portrait" />
+67-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:59:13-49
+68        <activity
+68-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:60:9-63:64
+69            android:name="com.example.flowtrandingsystem.gui.ui.LoadingActivity"
+69-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:61:13-51
+70            android:parentActivityName="com.example.flowtrandingsystem.gui.ui.MenuActivity"
+70-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:63:13-62
+71            android:screenOrientation="portrait" />
+71-->C:\Users\andre\AndroidStudioProjects\Flow-Tranding-System-App\app\src\main\AndroidManifest.xml:62:13-49
+72    </application>
+73
+74</manifest>
